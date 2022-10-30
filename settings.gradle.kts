@@ -1,0 +1,1 @@
+rootProject.name = "dev.hashnode.tusharpingale.food-recipes"

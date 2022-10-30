@@ -1,16 +1,19 @@
 package dev.hashnode.tusharpingale.plugins
 
+import dev.hashnode.tusharpingale.routes.addRecipe
+import dev.hashnode.tusharpingale.routes.deleteRecipe
+import dev.hashnode.tusharpingale.routes.getAllRecipes
+import dev.hashnode.tusharpingale.routes.getRecipe
 import io.ktor.server.routing.*
-import io.ktor.http.*
 import io.ktor.server.application.*
-import io.ktor.server.response.*
-import io.ktor.server.request.*
 
 fun Application.configureRouting() {
-
     routing {
-        get("/") {
-            call.respondText("Hello World!")
+        route("/recipes") {
+            addRecipe()
+            getRecipe()
+            getAllRecipes()
+            deleteRecipe()
         }
     }
 }
